@@ -1,0 +1,236 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+	  <link rel="stylesheet" href="css/chartist.min.css">
+      
+	    <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	  
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+
+        <div class="container">
+            <!-- Header goes here -->
+            <div class="row">
+                <header>
+                    <h1>Foreigners in the Czech Rep.</h1>
+                </header>
+            <!-- Navbar goes here -->
+                <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					
+					
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li class="nav-item active"><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+            </div>
+
+            <!-- Page Layout here -->
+            <div class="row">
+
+                <div class="col s7">
+                   <h2> Convicted persons and imposed sentences of expulsion</h2>
+						<div id="graph" style="height: 440px"></div>
+						<script>
+								$(function () {
+								Highcharts.chart('graph', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: null
+									},
+									xAxis: {
+										 categories: [
+													'2002',
+													'2003',
+													'2004',
+													'2005',
+													'2006',
+													'2007',
+													'2008',
+													'2009',
+													'2010',
+													'2011',
+													'2012',
+													'2013',
+													'2014'
+												],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Students’ registers'
+										}
+									},
+									legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Convicted total in CZ ',
+   									  data: [65098,66131,68443,67561,69445,75728,75761,73787,70651,70160,71471,77976,72825]
+									}, {
+										name: 'Foreigners ',
+										data: [3389,3657,4099,4223,4017,4690,5498,5328,4853,4853,4913,4920,4777]
+									}, {
+										name: 'Imposed sentences  ',
+										data: [1429,1263,1415,1510,1173,992,788,594,533,503,557,579,462]
+									}]
+								});
+							});
+						</script>
+						<p class="source-title">Source: Ministry of Justice (statistical reports of courts of law)</p>	
+					
+                </div>
+
+                <div class="col s5">
+                    <h2>Accused and convicted foreigners in custodial establishments and prisons and inmates </h2>
+                    <div id="graph2" style="height: 420px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph2', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Accused and convicted'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Accused ',
+                                    data: [757, 790, 792, 663, 532, 541, 505, 579, 549, 611, 552, 587, 543]
+                                }, {
+                                    name: 'Convicted ',
+                                    data: [917, 913 , 920 , 915 , 846 , 851 , 944, 1025 , 1119, 1163 , 1006 , 936, 1006]
+                                }]
+                            });
+                        });
+
+                    </script>
+						<p class="source-title">Source: General Directorate of the Prison Service of the CR</p>	
+                </div>
+
+            </div>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            ©2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  	  	  <script src="js/jquery-1.8.3.min.js"></script>
+			<script src="js/menumaker.js"></script>
+			<script type="text/javascript">
+				$("#cssmenu").menumaker({
+					title: "Menu",
+					format: "multitoggle"
+				});
+			</script>
+    </body>
+  </html>

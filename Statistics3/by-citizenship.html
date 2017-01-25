@@ -1,0 +1,212 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+     
+	 <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="css/chartist.min.css">
+	  
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+
+      <!--Import Chartist.js-->
+      <script type="text/javascript" src="js/chartist.min.js"></script>
+      <script type="text/javascript" src="js/chartist-plugin-axistitle.min.js"></script>
+
+      <!--Import Cezetmap - thanks to team from Moravio (https://github.com/Moravio/CEZET-Map) -->
+      <link rel="stylesheet" href="css/cezetmap.css" />
+      <link rel="stylesheet" href="css/cezetmap.custom.css" />
+      
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+    <div class="container">
+        <!-- Header goes here -->
+        <div class="row">
+            <header>
+                <h1>Foreigners in the Czech Rep.</h1>
+            </header>
+            <!-- Navbar goes here -->
+            <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+        <!-- Page Layout here -->
+		<div class="col s12">
+		<div class="col s2 text-center">
+                    <small><strong>Total: 464 670 in 2015</strong></small>
+                </div>
+				<br>
+            <table class="table striped">
+                <thead>
+                <tr>
+                    <td>
+                        Nationality
+                    </td>
+                    <td>
+                        2005
+                    </td>
+                    <td>
+                        2006
+                    </td>
+                    <td>
+                        2007
+                    </td>
+                    <td>
+                        2008
+                    </td>
+                    <td>
+                        2009
+                    </td>
+                    <td>
+                        2010
+                    </td>
+                    <td>
+                        2011
+                    </td>
+                    <td>
+                        2012
+                    </td>
+                    <td>
+                        2013
+                    </td>
+                    <td>
+                        2014
+                    </td>
+                    <td>
+                        2015
+                    </td>
+                </tr>
+                </thead>
+                <tbody class="append-csv">
+                </tbody>
+
+            </table>
+			</div>
+				<p class="source-title">Source: Czech Statistical Office, Directorate of Alien Police Service, Ministry of the Interior of the CR</p>
+
+           
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            ©2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/chartist-plugin-axistitle.min.js"></script>
+        <script src="js/jquery.csv.min.js"></script>
+        <script>
+            function readTextFile(file) {
+                var rawFile = new XMLHttpRequest();
+                rawFile.open("GET", file, false);
+                var allText = "";
+                rawFile.onreadystatechange = function ()
+                {
+                    if(rawFile.readyState === 4)
+                    {
+                        if(rawFile.status === 200 || rawFile.status == 0)
+                        {
+                            allText = rawFile.responseText;
+                            return allText;
+                        }
+                    }
+                }
+                rawFile.send(null);
+                return allText;
+            }
+
+            /* function getHighestNumber(data) {
+                var lastNumber = 0;
+                for (var i = 0; i < data.length; i++) {
+                    var number = data[i][1];
+                    var parsedNumber = parseInt(number);
+                    if (!isNaN(parsedNumber) &&parsedNumber > lastNumber) {
+                        lastNumber = parsedNumber;
+                    }
+                }
+                return lastNumber;
+            } */
+
+            $(document).ready(function() {
+                var fileContent = readTextFile('./data/bycitizenshipdecade.csv');
+                var data = $.csv.toArrays(fileContent, {
+                    separator: ";"
+                });
+                for (var i = 0; i < data.length; i++) {
+                    var state = data[i][0];
+                    var data2005 = data[i][1].replace(/ /g,"");
+                    var data2006 = data[i][2].replace(/ /g,"");
+                    var data2007 = data[i][3].replace(/ /g,"");
+                    var data2008 = data[i][4].replace(/ /g,"");
+                    var data2009 = data[i][5].replace(/ /g,"");
+                    var data2010 = data[i][6].replace(/ /g,"");
+                    var data2011 = data[i][7].replace(/ /g,"");
+                    var data2012 = data[i][8].replace(/ /g,"");
+                    var data2013 = data[i][9].replace(/ /g,"");
+                    var data2014 = data[i][10].replace(/ /g,"");
+                    var data2015 = data[i][11].replace(/ /g,"");
+                    var 
+					append = '<tr>';;
+                    append += '<td>' + state + '</td>';
+                    append += '<td>' + data2005 + '</td>';
+                    append += '<td>' + data2006 + '</td>';
+                    append += '<td>' + data2007 + '</td>';
+                    append += '<td>' + data2008 + '</td>';
+                    append += '<td>' + data2009 + '</td>';
+                    append += '<td>' + data2010 + '</td>';
+                    append += '<td>' + data2011 + '</td>';
+                    append += '<td>' + data2012 + '</td>';
+                    append += '<td>' + data2013 + '</td>';
+                    append += '<td>' + data2014 + '</td>';
+                    append += '<td>' + data2015 + '</td>';
+                    append += '</tr>';
+                    $('.append-csv').append(append);
+                }
+            });
+        </script>
+		 <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+		
+    </body>
+  </html>

@@ -1,0 +1,1285 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="css/chartist.min.css">
+
+      <!--Import Chartist.js-->
+      <script type="text/javascript" src="js/chartist.min.js"></script>
+	  
+  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+
+      <!--Import Cezetmap - thanks to team from Moravio (https://github.com/Moravio/CEZET-Map) -->
+      <link rel="stylesheet" href="css/cezetmap.css" />
+      <link rel="stylesheet" href="css/cezetmap.custom.smaller.css" />
+     
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+<div class="container">
+        <!-- Header goes here -->
+    <div class="row">
+            <header>
+                <h1>Foreigners in the Czech Repub.</h1>
+            </header>
+            <!-- Navbar goes here -->
+            <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+	</div>
+        <!-- Page Layout here -->
+		<div class="row">
+            <div class="col s4 center">
+				<div class="text-center">
+					 <strong>Chose the Region:</strong>
+                </div>
+                <div class="cezetmap smaller">
+                    <ul class="kraje">
+                        <li class="kraj zlinsky">Zlínský kraj</li>
+                        <li class="kraj moravskoslezsky">Moravskoslezský kraj</li>
+                        <li class="kraj jihomoravsky">Jihomoravský kraj</li>
+                        <li class="kraj olomoucky">Olomoucký kraj</li>
+                        <li class="kraj vysocina">Vysocina</li>
+                        <li class="kraj pardubicky">Pardubický kraj</li>
+                        <li class="kraj kralovehradecky">Královehradecký kraj</li>
+                        <li class="kraj jihocesky">Jihoceský kraj</li>
+                        <li class="kraj hlavni-mesto-praha">Hlavní mesto Praha</li>
+                        <li class="kraj stredocesky">Stredoceský kraj</li>
+                        <li class="kraj liberecky">Liberecký kraj</li>
+                        <li class="kraj plzensky">Plzenský kraj</li>
+                        <li class="kraj ustecky">Ústecký kraj</li>
+                        <li class="kraj karlovarsky">Karlovarský kraj</li>
+                    </ul>
+                </div>
+				<p class="source-title">Map: <a href="http://www.cezetmap.cz/">Cezetmap</a> | <a href="http://www.moravio.com/">MORAVIO.COM</a></p>
+                <small><strong>Total: 464 670 in 2015</strong></small>
+            </div>
+			<div class="col s1">
+			</div>
+			<div class="col s7 center">
+                    <div class="text-center">
+
+                    <div class="kraj-tabulka kr-stredocesky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Stredoceský:</h3>
+                        <h3>Total: 48 023</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr> <!-- sloupec pro mesto Benešov -->
+                                <td>Benešov</td>
+                                <td>576</td> <!-- 576 Ukrajincu -->
+                                <td>593</td> <!-- 593 Slováku -->
+                                <td>261</td> <!-- 261 Vietnamcu -->
+                                <td>68</td> <!-- 68 Rusu -->
+                                <td>43</td> <!-- 43 Nemcu -->
+                                <td>124</td> <!-- 124 Poláku -->
+                            </tr> <!-- konec mesta Benešov -->
+
+                            <tr> <!-- sloupec pro mesto Beroun -->
+                                <td>Beroun</td>
+                                <td>924</td> <!-- ukrajincu -->
+                                <td>1154</td> <!-- 1154 slováku -->
+                                <td>363</td> <!-- 363 vietnamcu -->
+                                <td>207</td> <!-- 207 rusu -->
+                                <td>94</td> <!-- 94 nemcu -->
+                                <td>50</td> <!-- 50 poláku -->
+                            </tr> <!-- konec Berouna -->
+
+                            <tr>
+                                <td>Kladno</td>
+                                <td>1697</td>
+                                <td>1937</td>
+                                <td>791</td>
+                                <td>627</td>
+                                <td>84</td>
+                                <td>174</td>
+                            </tr>
+
+                            <tr>
+                                <td>Kolín</td>
+                                <td>818</td>
+                                <td>1187</td>
+                                <td>359</td>
+                                <td>109</td>
+                                <td>45</td>
+                                <td>138</td>
+                            </tr>
+
+                            <tr>
+                                <td>Kutná Hora</td>
+                                <td>570</td>
+                                <td>573</td>
+                                <td>333</td>
+                                <td>31</td>
+                                <td>27</td>
+                                <td>86</td>
+                            </tr>
+
+                            <tr>
+                                <td>Melník</td>
+                                <td>1557</td>
+                                <td>960</td>
+                                <td>341</td>
+                                <td>170</td>
+                                <td>61</td>
+                                <td>97</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mladá Boleslav</td>
+                                <td>1596</td>
+                                <td>4477</td>
+                                <td>675</td>
+                                <td>242</td>
+                                <td>121</td>
+                                <td>1353</td>
+                            </tr>
+
+                            <tr>
+                                <td>Nymburk</td>
+                                <td>1183</td>
+                                <td>983</td>
+                                <td>313</td>
+                                <td>343</td>
+                                <td>39</td>
+                                <td>82</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha - východ</td>
+                                <td>3679</td>
+                                <td>3229</td>
+                                <td>406</td>
+                                <td>957</td>
+                                <td>197</td>
+                                <td>217</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha - západ</td>
+                                <td>2320</td>
+                                <td>2193</td>
+                                <td>625</td>
+                                <td>1554</td>
+                                <td>265</td>
+                                <td>212</td>
+                            </tr>
+
+                            <tr>
+                                <td>Príbram</td>
+                                <td>768</td>
+                                <td>671</td>
+                                <td>293</td>
+                                <td>108</td>
+                                <td>80</td>
+                                <td>50</td>
+                            </tr>
+
+                            <tr>
+                                <td>Rakovník</td>
+                                <td>497</td>
+                                <td>350</td>
+                                <td>476</td>
+                                <td>54</td>
+                                <td>91</td>
+                                <td>95</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-jihocesky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Jihoceský:</h3>
+                        <h3>Total: 11880</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Ceské Budejovice</td>
+                                <td>1394</td>
+                                <td>1243</td>
+                                <td>622</td>
+                                <td>283</td>
+                                <td>269</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>Ceský Krumlov</td>
+                                <td>542</td>
+                                <td>393</td>
+                                <td>502</td>
+                                <td>78</td>
+                                <td>136</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Jindrochuv Hradec</td>
+                                <td>231</td>
+                                <td>321</td>
+                                <td>545</td>
+                                <td>42</td>
+                                <td>91</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Písek</td>
+                                <td>411</td>
+                                <td>407</td>
+                                <td>299</td>
+                                <td>20</td>
+                                <td>41</td>
+                                <td>60</td>
+                            </tr>
+
+                            <tr>
+                                <td>Prachatice</td>
+                                <td>206</td>
+                                <td>178</td>
+                                <td>363</td>
+                                <td>24</td>
+                                <td>114</td>
+                                <td>23</td>
+                            </tr>
+
+                            <tr>
+                                <td>Strakonice</td>
+                                <td>679</td>
+                                <td>444</td>
+                                <td>223</td>
+                                <td>18</td>
+                                <td>99</td>
+                                <td>47</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tábor</td>
+                                <td>542</td>
+                                <td>488</td>
+                                <td>204</td>
+                                <td>39</td>
+                                <td>47</td>
+                                <td>50</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-plzensky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Plzenský:</h3>
+                        <h3>Total: 21763</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Domažlice</td>
+                                <td>334</td>
+                                <td>576</td>
+                                <td>1088</td>
+                                <td>25</td>
+                                <td>343</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>Klatovy</td>
+                                <td>427</td>
+                                <td>665</td>
+                                <td>386</td>
+                                <td>25</td>
+                                <td>338</td>
+                                <td>72</td>
+                            </tr>
+                            <tr>
+                                <td>Plzen</td>
+                                <td>3543</td>
+                                <td>3496</td>
+                                <td>2082</td>
+                                <td>292</td>
+                                <td>659</td>
+                                <td>453</td>
+                            </tr>
+                            <tr>
+                                <td>Plzen - jih</td>
+                                <td>359</td>
+                                <td>444</td>
+                                <td>253</td>
+                                <td>17</td>
+                                <td>289</td>
+                                <td>45</td>
+                            </tr>
+
+                            <tr>
+                                <td>Plzen - sever</td>
+                                <td>350</td>
+                                <td>625</td>
+                                <td>237</td>
+                                <td>10</td>
+                                <td>123</td>
+                                <td>83</td>
+                            </tr>
+
+                            <tr>
+                                <td>Rokycany</td>
+                                <td>406</td>
+                                <td>476</td>
+                                <td>149</td>
+                                <td>27</td>
+                                <td>56</td>
+                                <td>58</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tachov</td>
+                                <td>428</td>
+                                <td>735</td>
+                                <td>1152</td>
+                                <td>20</td>
+                                <td>483</td>
+                                <td>101</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-karlovarsky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Karlovarský:</h3>
+                        <h3>Total: 16204</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cheb</td>
+                                <td>770</td>
+                                <td>735</td>
+                                <td>3473</td>
+                                <td>403</td>
+                                <td>700</td>
+                                <td>81</td>
+                            </tr>
+                            <tr>
+                                <td>Karlovy Vary</td>
+                                <td>1364</td>
+                                <td>709</td>
+                                <td>2469</td>
+                                <td>1811</td>
+                                <td>1206</td>
+                                <td>77</td>
+                            </tr>
+                            <tr>
+                                <td>Sokolov</td>
+                                <td>260</td>
+                                <td>528</td>
+                                <td>738</td>
+                                <td>132</td>
+                                <td>690</td>
+                                <td>58</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-ustecky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Ústecký:</h3>
+                        <h3>Total: 26622</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Decín</td>
+                                <td>351</td>
+                                <td>441</td>
+                                <td>1668</td>
+                                <td>98</td>
+                                <td>575</td>
+                                <td>360</td>
+                            </tr>
+                            <tr>
+                                <td>Chomutov</td>
+                                <td>868</td>
+                                <td>806</td>
+                                <td>1507</td>
+                                <td>112</td>
+                                <td>1307</td>
+                                <td>194</td>
+                            </tr>
+                            <tr>
+                                <td>Litomerice</td>
+                                <td>848</td>
+                                <td>523</td>
+                                <td>529</td>
+                                <td>76</td>
+                                <td>368</td>
+                                <td>112</td>
+                            </tr>
+                            <tr>
+                                <td>Louny</td>
+                                <td>391</td>
+                                <td>610</td>
+                                <td>408</td>
+                                <td>90</td>
+                                <td>161</td>
+                                <td>69</td>
+                            </tr>
+
+                            <tr>
+                                <td>Most</td>
+                                <td>367</td>
+                                <td>600</td>
+                                <td>1069</td>
+                                <td>73</td>
+                                <td>1851</td>
+                                <td>142</td>
+                            </tr>
+
+                            <tr>
+                                <td>Teplice</td>
+                                <td>774</td>
+                                <td>643</td>
+                                <td>1540</td>
+                                <td>817</td>
+                                <td>2494</td>
+                                <td>65</td>
+                            </tr>
+
+                            <tr>
+                                <td>Ústí nad Labem</td>
+                                <td>794</td>
+                                <td>805</td>
+                                <td>1202</td>
+                                <td>279</td>
+                                <td>496</td>
+                                <td>139</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-kralovehradecky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Královéhradecký:</h3>
+                        <h3>Total: 10608</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Hradec Králové</td>
+                                <td>1612</td>
+                                <td>906</td>
+                                <td>470</td>
+                                <td>137</td>
+                                <td>109</td>
+                                <td>188</td>
+                            </tr>
+                            <tr>
+                                <td>Jicín</td>
+                                <td>602</td>
+                                <td>580</td>
+                                <td>262</td>
+                                <td>54</td>
+                                <td>65</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td>Náchod</td>
+                                <td>616</td>
+                                <td>361</td>
+                                <td>391</td>
+                                <td>48</td>
+                                <td>68</td>
+                                <td>530</td>
+                            </tr>
+                            <tr>
+                                <td>Rychnov nad Knežnou</td>
+                                <td>275</td>
+                                <td>411</td>
+                                <td>187</td>
+                                <td>24</td>
+                                <td>26</td>
+                                <td>305</td>
+                            </tr>
+
+                            <tr>
+                                <td>Trutnov</td>
+                                <td>594</td>
+                                <td>544</td>
+                                <td>301</td>
+                                <td>58</td>
+                                <td>102</td>
+                                <td>652</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-liberecky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Liberecký:</h3>
+                        <h3>Total: 13732</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Ceská Lípa</td>
+                                <td>435</td>
+                                <td>577</td>
+                                <td>537</td>
+                                <td>122</td>
+                                <td>117</td>
+                                <td>241</td>
+                            </tr>
+                            <tr>
+                                <td>Jablonec nad Nisou</td>
+                                <td>1122</td>
+                                <td>1125</td>
+                                <td>394</td>
+                                <td>55</td>
+                                <td>106</td>
+                                <td>394</td>
+                            </tr>
+                            <tr>
+                                <td>Liberec</td>
+                                <td>2750</td>
+                                <td>2194</td>
+                                <td>893</td>
+                                <td>299</td>
+                                <td>286</td>
+                                <td>595</td>
+                            </tr>
+                            <tr>
+                                <td>Semily</td>
+                                <td>601</td>
+                                <td>402</td>
+                                <td>199</td>
+                                <td>47</td>
+                                <td>43</td>
+                                <td>198</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-pardubicky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Pardubický:</h3>
+                        <h3>Total: 9078</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Chrudim</td>
+                                <td>404</td>
+                                <td>362</td>
+                                <td>294</td>
+                                <td>28</td>
+                                <td>31</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>Pardubice</td>
+                                <td>1446</td>
+                                <td>2013</td>
+                                <td>567</td>
+                                <td>101</td>
+                                <td>59</td>
+                                <td>238</td>
+                            </tr>
+                            <tr>
+                                <td>Svitavy</td>
+                                <td>314</td>
+                                <td>311</td>
+                                <td>167</td>
+                                <td>27</td>
+                                <td>27</td>
+                                <td>79</td>
+                            </tr>
+                            <tr>
+                                <td>Ústí nad Orlicí</td>
+                                <td>574</td>
+                                <td>828</td>
+                                <td>255</td>
+                                <td>42</td>
+                                <td>48</td>
+                                <td>825</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-vysocina display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Kraj Vysocina:</h3>
+                        <h3>Total: 6070</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Havlíckuv Brod</td>
+                                <td>235</td>
+                                <td>481</td>
+                                <td>216</td>
+                                <td>52</td>
+                                <td>29</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td>Jihlava</td>
+                                <td>657</td>
+                                <td>648</td>
+                                <td>301</td>
+                                <td>35</td>
+                                <td>81</td>
+                                <td>49</td>
+                            </tr>
+                            <tr>
+                                <td>Pelhrimov</td>
+                                <td>596</td>
+                                <td>429</td>
+                                <td>215</td>
+                                <td>19</td>
+                                <td>18</td>
+                                <td>31</td>
+                            </tr>
+                            <tr>
+                                <td>Trebíc</td>
+                                <td>301</td>
+                                <td>266</td>
+                                <td>320</td>
+                                <td>28</td>
+                                <td>34</td>
+                                <td>32</td>
+                            </tr>
+
+                            <tr>
+                                <td>Ždár nad Sázavou</td>
+                                <td>341</td>
+                                <td>345</td>
+                                <td>157</td>
+                                <td>19</td>
+                                <td>32</td>
+                                <td>44</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-olomoucky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Olomoucký:</h3>
+                        <h3>Total: 7677</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Jeseník</td>
+                                <td>33</td>
+                                <td>180</td>
+                                <td>139</td>
+                                <td>14</td>
+                                <td>160</td>
+                                <td>131</td>
+                            </tr>
+                            <tr>
+                                <td>Olomouc</td>
+                                <td>800</td>
+                                <td>1533</td>
+                                <td>545</td>
+                                <td>180</td>
+                                <td>119</td>
+                                <td>153</td>
+                            </tr>
+                            <tr>
+                                <td>Prostejov</td>
+                                <td>385</td>
+                                <td>505</td>
+                                <td>143</td>
+                                <td>26</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>Prerov</td>
+                                <td>322</td>
+                                <td>664</td>
+                                <td>420</td>
+                                <td>53</td>
+                                <td>44</td>
+                                <td>85</td>
+                            </tr>
+
+                            <tr>
+                                <td>Šumperk</td>
+                                <td>217</td>
+                                <td>317</td>
+                                <td>223</td>
+                                <td>17</td>
+                                <td>42</td>
+                                <td>155</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Hlavní mesto Praha:</h3>
+                        <h3>Total: 112717</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Praha</td>
+                                <td>45633</td>
+                                <td>27563</td>
+                                <td>11707</td>
+                                <td>21338</td>
+                                <td>3509</td>
+                                <td>2967</td>
+                            </tr>
+                            <tr>
+                                <td>Praha 1</td>
+                                <td>477</td>
+                                <td>493</td>
+                                <td>276</td>
+                                <td>518</td>
+                                <td>228</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td>Praha 2</td>
+                                <td>1541</td>
+                                <td>1209</td>
+                                <td>398</td>
+                                <td>1263</td>
+                                <td>437</td>
+                                <td>167</td>
+                            </tr>
+                            <tr>
+                                <td>Praha 3</td>
+                                <td>3189</td>
+                                <td>1938</td>
+                                <td>512</td>
+                                <td>1703</td>
+                                <td>294</td>
+                                <td>208</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 4</td>
+                                <td>8927</td>
+                                <td>5399</td>
+                                <td>5636</td>
+                                <td>2596</td>
+                                <td>459</td>
+                                <td>615</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 5</td>
+                                <td>7889</td>
+                                <td>4200</td>
+                                <td>959</td>
+                                <td>5112</td>
+                                <td>690</td>
+                                <td>570</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 6</td>
+                                <td>3278</td>
+                                <td>2315</td>
+                                <td>486</td>
+                                <td>2881</td>
+                                <td>484</td>
+                                <td>293</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 7</td>
+                                <td>1457</td>
+                                <td>1123</td>
+                                <td>521</td>
+                                <td>836</td>
+                                <td>192</td>
+                                <td>76</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 8</td>
+                                <td>4039</td>
+                                <td>2195</td>
+                                <td>510</td>
+                                <td>1469</td>
+                                <td>203</td>
+                                <td>201</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 9</td>
+                                <td>8892</td>
+                                <td>4574</td>
+                                <td>1023</td>
+                                <td>2503</td>
+                                <td>238</td>
+                                <td>340</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha 10</td>
+                                <td>5933</td>
+                                <td>3921</td>
+                                <td>1379</td>
+                                <td>2453</td>
+                                <td>273</td>
+                                <td>412</td>
+                            </tr>
+
+                            <tr>
+                                <td>Praha ?</td>
+                                <td>11</td>
+                                <td>196</td>
+                                <td>7</td>
+                                <td>4</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-zlinsky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Zlínský:</h3>
+                        <h3>Total: 6419</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Kromeríž</td>
+                                <td>183</td>
+                                <td>430</td>
+                                <td>174</td>
+                                <td>38</td>
+                                <td>24</td>
+                                <td>46</td>
+                            </tr>
+                            <tr>
+                                <td>Uherské Hradište</td>
+                                <td>226</td>
+                                <td>1244</td>
+                                <td>188</td>
+                                <td>48</td>
+                                <td>90</td>
+                                <td>51</td>
+                            </tr>
+                            <tr>
+                                <td>Vsetín</td>
+                                <td>170</td>
+                                <td>746</td>
+                                <td>116</td>
+                                <td>30</td>
+                                <td>41</td>
+                                <td>117</td>
+                            </tr>
+                            <tr>
+                                <td>Zlín</td>
+                                <td>359</td>
+                                <td>1510</td>
+                                <td>293</td>
+                                <td>131</td>
+                                <td>59</td>
+                                <td>105</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-moravskoslezsky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Moravskoslezský:</h3>
+                        <h3>Total: 19838</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Bruntál</td>
+                                <td>50</td>
+                                <td>331</td>
+                                <td>155</td>
+                                <td>8</td>
+                                <td>27</td>
+                                <td>167</td>
+                            </tr>
+                            <tr>
+                                <td>Frýdek-Místek</td>
+                                <td>134</td>
+                                <td>1379</td>
+                                <td>344</td>
+                                <td>51</td>
+                                <td>51</td>
+                                <td>844</td>
+                            </tr>
+                            <tr>
+                                <td>Karviná</td>
+                                <td>144</td>
+                                <td>1904</td>
+                                <td>285</td>
+                                <td>61</td>
+                                <td>54</td>
+                                <td>3336</td>
+                            </tr>
+                            <tr>
+                                <td>Nový Jicín</td>
+                                <td>124</td>
+                                <td>744</td>
+                                <td>337</td>
+                                <td>36</td>
+                                <td>53</td>
+                                <td>129</td>
+                            </tr>
+                            <tr>
+                                <td>Opava</td>
+                                <td>103</td>
+                                <td>481</td>
+                                <td>333</td>
+                                <td>44</td>
+                                <td>97</td>
+                                <td>249</td>
+                            </tr>
+                            <tr>
+                                <td>Ostrava-mesto</td>
+                                <td>681</td>
+                                <td>3250</td>
+                                <td>2832</td>
+                                <td>275</td>
+                                <td>101</td>
+                                <td>644</td>
+                            </tr>
+                            <tr>
+                                <td>Nezjišteno</td>
+                                <td>158</td>
+                                <td>150</td>
+                                <td>39</td>
+                                <td>42</td>
+                                <td>19</td>
+                                <td>17</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+                    <div class="kraj-tabulka kr-jihomoravsky display-none">
+                        <strong>2015:</strong></br>
+                        <h3>Jihomoravský:</h3>
+                        <h3>Total: 28061</h3>
+                        <table class="table striped">
+                            <thead>
+                            <tr>
+                                <td></td>
+                                <td>Ukraine</td>
+                                <td>Slovakia</td>
+                                <td>Viet Nam</td>
+                                <td>Russia</td>
+                                <td>Germany</td>
+                                <td>Poland</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Blansko</td>
+                                <td>437</td>
+                                <td>582</td>
+                                <td>108</td>
+                                <td>69</td>
+                                <td>29</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>Brno - mesto</td>
+                                <td>6291</td>
+                                <td>5390</td>
+                                <td>2720</td>
+                                <td>1487</td>
+                                <td>279</td>
+                                <td>472</td>
+                            </tr>
+                            <tr>
+                                <td>Brno - venkov</td>
+                                <td>1518</td>
+                                <td>1491</td>
+                                <td>388</td>
+                                <td>113</td>
+                                <td>78</td>
+                                <td>115</td>
+                            </tr>
+                            <tr>
+                                <td>Breclav</td>
+                                <td>381</td>
+                                <td>1045</td>
+                                <td>328</td>
+                                <td>34</td>
+                                <td>54</td>
+                                <td>43</td>
+                            </tr>
+                            <tr>
+                                <td>Hodonín</td>
+                                <td>160</td>
+                                <td>1197</td>
+                                <td>253</td>
+                                <td>35</td>
+                                <td>28</td>
+                                <td>41</td>
+                            </tr>
+                            <tr>
+                                <td>Vyškov</td>
+                                <td>555</td>
+                                <td>487</td>
+                                <td>143</td>
+                                <td>30</td>
+                                <td>34</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Znojmo</td>
+                                <td>251</td>
+                                <td>485</td>
+                                <td>617</td>
+                                <td>74</td>
+                                <td>74</td>
+                                <td>60</td>
+                            </tr>
+                            </tbody>
+                        </table>
+						<p class="source-title">Source: Directorate of Alien Police Service</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+			
+		</div>
+			<!-- </div>-/.main row-->
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            © 2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+</div><!--/.container-->
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/cezetmap.js"> </script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script>
+            $(document).on('click', '.kraj', function() {
+                var el = $('.click');
+                var className = el.attr('class');
+                var region = className.split(' ')[1];
+                $('.kraj-tabulka').addClass('display-none');
+                $('.kr-' + region).removeClass('display-none');
+            });
+
+            $(document).on('onmouseover', '.kraj', function () {
+                $('kraj').addClass('kraj_hover');
+            });
+        </script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+
+    </body>
+  </html>

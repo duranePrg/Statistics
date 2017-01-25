@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+  <html>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+	  <link rel="stylesheet" href="css/chartist.min.css">
+      
+
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	  
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+    <div class="container">
+        <!-- Header goes here -->
+        <div class="row">
+            <header>
+                <h1>Foreigners in the Czech Rep.</h1>
+            </header>
+            <!-- Navbar goes here -->
+            <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+        <!-- Page Layout here -->
+        
+			<div class="row">
+				<div class="col s12">
+				
+						<h2>Foreign students by field of study in school years 2005/06–2014/15</h2>
+						<div id="graph2" style="height: 500px"></div>
+						<script>
+							$(function () {
+								Highcharts.chart('graph2', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: null
+									},
+									xAxis: {
+										categories: ['2005/06','2006/07','2007/08','2008/09','2009/10','2010/11','2011/12','2012/13','2013/14','2014/15'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreign students'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:13px; font-weight:bold;">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>'+'<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'IT ',
+									  data: [8,7,5,6,11,15,15,16,8,8]
+									}, {
+										name: 'Health care Ser. ',
+										data: [85,64,65,63,81,102,115,147,157,169]
+									}, {
+										name: 'Philosophy,Theology ',
+										data: [7,18,19,16,21,24,35,19,15,11]
+									}, {
+										name: 'Econ. and Admin.',
+										data: [71,53,51,32,49,54,51,52,49,39]
+									},{
+										name: 'Making business in industries ',
+										data: [23,19,24,19,18,23,23,18,15,20]
+									},{
+										name: 'Gastronomy, hotel and tourist ',
+										data: [41,55,58,69,57,52,43,59,55,69]
+									},{
+										name: 'Legal and public Admin. Ser. ',
+										data: [25,36,26,23,21,23,21,17,11,15]
+									},{
+										name: 'Pedagogy ',
+										data: [13,13,16,24,28,31,28,41,58,34]
+									},{
+										name: 'Arts ',
+										data: [28,24,34,38,44,69,66,66,86,101]
+									},{
+										name: 'Other ',
+										data: [12,15,23,17,19,33,67,75,93,86]
+									}]
+								});
+							});
+						</script>
+						<p class="source-title">Source: Ministry of Education, Youth and Sports</p>	
+						<p class="parragraph2">Note: Fields of study according to the Order of the Government of study in the primary, secondary, and higher professional education, as amended. <br>
+				</div>
+			</div>
+			<div class="row">	
+				<div class="col s7">
+							<h2>Foreign students in years 1998/99–2014/15</h2>
+								<div id="graph" style="height: 420px"></div>
+								<script>
+										 $(function () {
+									Highcharts.chart('graph', {
+										chart: {
+											type: 'column'
+										},
+										title: {
+											text: false
+										},
+										xAxis: {
+											categories: ['1998','1999','2000','2001','2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
+										},
+										yAxis: {
+											min: 0,
+											title: {
+												text: 'Foreigners students '
+											},
+											stackLabels: {
+												enabled: true,
+												style: {
+													fontWeight: 'bold',
+													color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+												}
+											}
+										},
+										legend: {
+											align: 'right',
+											x: 0,
+											verticalAlign: 'top',
+											y: -10,
+											floating: true,
+											backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+											borderColor: '#CCC',
+											borderWidth: 1,
+											shadow: false
+										},
+										tooltip: {
+											headerFormat: '<b>{point.x}</b><br/>',
+											pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+										},
+										plotOptions: {
+											column: {
+												stacking: 'normal',
+												dataLabels: {
+													enabled: false,
+													color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+												}
+											}
+										},
+										series: [{
+											name: 'Full-time study ',
+											data: [144,165,207,256,276,259,238,202,194,202,196,209,270,292,326,351,379] 
+										}, {
+											name: 'Distance study ',
+											data: [36,44,46,53,103,126,115,111,110,119,111,140,156,172,184,196,173]
+										}]
+									});
+								});
+								</script>
+								<p class="source-title">Source: Ministry of Education, Youth and Sports</p>	
+				</div>
+			</div>
+			
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            © 2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+    </body>
+ </html>

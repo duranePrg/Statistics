@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/chartist.min.css">
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+
+	 <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	  
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- Header goes here -->
+            <div class="row">
+                <header>
+                    <h1>Foreigners in the Czech Rep.</h1>
+                </header>
+            <!-- Navbar goes here -->
+             <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					
+					
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li class="nav-item active"><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+            </div>
+
+            <!-- Page Layout here -->
+            <div class="row">
+
+                <div class="col s5">
+                    <p class="parragraph">More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,<p>
+					 <p class="parragraph">More Info about the Articles<p>
+					
+                </div>
+
+                <div class="col s7 center">
+                    <h2>Czech citizenship acquired per year</h2>
+                    <div id="graph" style="height: 420px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2001','2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Foreigners'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Act No. 193/1999 Sb ',
+                                    data: [1607,1273, 1154, 1784, 190, 205, 225, 229, 173, 171, 144, 140, 137, 22]
+                                }, {
+                                    name: 'Act No. 40/1993 Sb and 186/2013 Sb',
+                                    data: [4714,3259, 2256, 3236 , 2436 , 2141 , 1652 , 1608, 1448 , 1324, 1792 , 1896 , 2380, 5092]
+                                }]
+                            });
+                        });
+
+                    </script>
+					<p class="source-title">Source: Ministry of the Interior of the CR</p>
+
+ 
+					
+                </div>
+
+            </div>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            © 2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  	  <script src="js/jquery-1.8.3.min.js"></script>
+			<script src="js/menumaker.js"></script>
+			<script type="text/javascript">
+				$("#cssmenu").menumaker({
+					title: "Menu",
+					format: "multitoggle"
+				});
+			</script>
+    </body>
+  </html>

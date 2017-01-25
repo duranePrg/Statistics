@@ -1,0 +1,363 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+       <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/chartist.min.css">
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+
+	    <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	  
+	  
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- Header goes here -->
+            <div class="row">
+                <header>
+                    <h1>Foreigners in the Czech Rep.</h1>
+                </header>
+				<!-- Navbar goes here -->
+                <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					
+					
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li class="nav-item active"><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+            </div>
+
+            <!-- Page Layout here -->
+            <div class="row">
+				<div class="col s6">
+                  <h2>Marriages</h2>
+                    <div id="graph1" style="height: 415px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph1', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014','2015']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Marriages'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Male Foreigner',
+                                    data: [3092,2672,2824,2788,2969,2652,2549,2845,2585,2374,2403,2384,2344,2370,3048,3016]
+									
+                                }, {
+                                    name: 'Female Foreigner',
+                                    data: [2160,1691,1722,1859,2011,1822,1907,1940,1649,1803,1707,1722,1663,1473,1802,1802]
+								}, {
+                                    name: 'Both foreigners',
+                                    data: [61,54,53,69,72,96,110,184,160,192,214,250,276,243,365,352]
+                                }]
+                            });
+                        });
+
+                    </script>
+					<p class="source-title">Source: Czech Statistical Office</p>
+					<br>
+					<h2>Live births</h2>
+                    <div id="graph2" style="height: 415px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph2', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014','2015']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Live births & Deaths'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [ {
+                                    name: 'Live births',
+                                    data: [1036,888,1154,1276,1352,1518,1725,2094,2666,3104,3034,2959,3270,3345,3482,3631]
+								}]
+                            });
+                        });
+
+                    </script>					
+					<p class="source-title">Source: Czech Statistical Office</p>	
+						
+                </div>
+                <div class="col s6">
+				
+				 <h2>Divorces</h2>
+					<div id="graph3" style="height: 415px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph3', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014','2015']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Divorces'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Male Foreigner',
+                                    data: [643,643,735,801,902,963,1069,1198,1268,1074,1197,1026,1032,935,942,1005]
+									
+                                }, {
+                                    name: 'Female Foreigner',
+                                    data: [315,366,432,515,568,625,717,840,831,777,790,678,665,648,656,686]
+								}, {
+                                    name: 'Both foreigners',
+                                    data: [46,24,37,49,53,57,86,113,118,138,197,170,203,259,296,355]
+                                }]
+                            });
+                        });
+
+                    </script>
+					<p class="source-title">Source: Czech Statistical Office</p>
+                    
+					<br>
+					<h2>Abortions and Deaths</h2>
+					 <div id="graph4" style="height: 415px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph4', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014','2015']
+                                },
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Abortions'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Abortions ',
+                                    data: [2476,2576,2751,2660,2254,2238,2285,2658,3252,3020,2659,1370,2319,2171,1955,1909]
+									
+                                },{
+                                    name: 'Deaths ',
+                                    data: [285,252,247,219,231,245,281,287,299,332,356,404,561,534,560,642]
+									
+                                },]
+                            });
+                        });
+
+                    </script>
+					<p class="source-title">Source: Czech Statistical Office</p>	
+                </div>
+				<br>
+                <p class="parragraph">Since 2008 at border crossing when leaving across the external Schengen border (air border).
+				More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,<p>			
+                    
+			</div>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            ©2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  	  <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+	$("#cssmenu").menumaker({
+		title: "Menu",
+		format: "multitoggle"
+	});
+</script>
+    </body>
+  </html>

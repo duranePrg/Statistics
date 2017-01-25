@@ -1,0 +1,231 @@
+ <!DOCTYPE html>
+  <html>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+	  <link rel="stylesheet" href="css/chartist.min.css">
+
+	   <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+      
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+    <div class="container">
+        <!-- Header goes here -->
+        <div class="row">
+            <header>
+                <h1>Foreigners in the Czech Rep.</h1>
+            </header>
+            <!-- Navbar goes here -->
+             <div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+        <!-- Page Layout here -->
+        
+			<div class="row">
+				<div class="col s6">
+					
+						<h2>Foreign students in academic years 2003/04–2014/15</h2>
+						<div id="graph" style="height: 420px"></div>
+						<script>
+								$(function () {
+								Highcharts.chart('graph', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: null
+									},
+									xAxis: {
+										 categories: [
+													'2003/04',
+													'2004/05',
+													'2005/06',
+													'2006/07',
+													'2007/08',
+													'2008/09',
+													'2009/10',
+													'2010/11',
+													'2011/12',
+													'2012/13',
+													'2013/14',
+													'2014/15'
+												],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Students’ registers'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Bachelor ',
+									  data: [3289,5357,7224,8983,10652,11668,13276,14917,15973,17540,18649,19602]
+									}, {
+										name: 'Master(1) ',
+										data: [6796,7194,7283,6952,6536,6203,6332,6380,6512,6596,6768,6914]
+									}, {
+										name: 'Follow-up master(2) ',
+										data: [420,655,1009,1411,2270,3601,4697,5436,6156,6671,7217,7585]
+									}, {
+										name: 'Doctoral programmes ',
+										data: [725,862,1006,1195,1328,1382,1512,1661,1741,1873,2079,2187]
+									},{
+										name: 'Combined studies ',
+										data: [2029,3220,4608,5610,6635,7693,9079,9581,8771,7191,6101,5196]
+									}]
+								});
+							});
+						</script>
+						<p class="source-title">Source: Ministry of Education, Youth and Sports</p>	
+				</div>
+				
+				<div class="col s6">
+				
+						<h2>Foreign graduates</h2>
+						<div id="graph2" style="height: 420px"></div>
+						<script>
+							$(function () {
+								Highcharts.chart('graph2', {
+									chart: {
+										type: 'column'
+									},
+									title: {
+										text: null
+									},
+									subtitle: {
+										text: null
+									},
+									xAxis: {
+										categories: ['2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'],
+										crosshair: true
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Foreign graduates'
+										}
+									},
+									tooltip: {
+										headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+										pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+										footerFormat: '</table>',
+										shared: true,
+										useHTML: true
+									},
+									plotOptions: {
+										column: {
+											pointPadding:0.1,
+											borderWidth: 0.1
+										}
+									},
+									series: [{
+										name: 'Bachelor ',
+									  data: [193,376,628,793,1272,1830,2044,2207,2549,2679,3109,3289]
+									}, {
+										name: 'Master(1) ',
+										data: [358, 484,787,1149,1133,1014,801,931,906,881,832,882]
+									}, {
+										name: 'Follow-up master(2) ',
+										data: [73,100,149,254,390,540,989,1511,1645,1926,2155,2280]
+									}, {
+										name: 'Doctoral programmes ',
+										data: [41,36,51,37,39,75,78,64,98,91,94,107] 
+									},{
+										name: 'Combined studies ',
+										data: [101,153,330,855,1325,1405,1803,2031,2385,2660,2090,1740]
+									}]
+								});
+							});
+						</script>
+						<p class="source-title">Source: Ministry of Education, Youth and Sports</p>	
+						
+				</div>
+				
+			</div>
+			<div class="row">
+			<p class="parragraph2"> The total may not be equal to the sum of types of studies, types of programmes.<br>
+											1) Master programmes lasting 4 to 6 years.<br>
+											2) Master programmes lasting 1 to 3 years, which are a follow-up of bachelor programmes.<br>
+											It applies to data for 2003–2014 according to students’ registers data as at 31 December 2014. The data may not be the same as data published in previous years, because data in students’ registers of universities can be updated also backwards</p>
+					
+			</div>
+        
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            © 2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+    </body>
+ </html>

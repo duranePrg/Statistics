@@ -1,0 +1,378 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+     
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="css/chartist.min.css">
+
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	
+      <!--Import Chartist.js-->
+      <script type="text/javascript" src="js/chartist.min.js"></script>
+      <script type="text/javascript" src="js/chartist-plugin-axistitle.min.js"></script>
+
+      <!--Import Cezetmap - thanks to team from Moravio (https://github.com/Moravio/CEZET-Map) -->
+      <link rel="stylesheet" href="css/cezetmap.css" />
+      <!--<link rel="stylesheet" href="css/cezetmap.custom.css" />-->
+	  <link rel="stylesheet" href="css/cezetmap.custom.smaller.css" />
+     
+      <script src="js/cezetmap.js"> </script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+<body>
+
+	<div class="container">
+        <!-- Header goes here -->
+		<div class="row">
+            <header>
+                <h1>Foreigners in the Czech Rep.</h1>
+            </header>
+            <!-- Navbar goes here -->
+				<div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+		</div>
+			<!-- Page Layout here -->
+		<div class="row">
+					<div class="col s4 center">
+						<div class="text-center">
+							 <strong>Chose the Region:</strong>
+						</div>
+						<div class="cezetmap smaller">
+							<ul class="kraje smaller">
+								<li class="kraj zlinsky">Zlínský kraj</li>
+								<li class="kraj moravskoslezsky">Moravskoslezský kraj</li>
+								<li class="kraj jihomoravsky">Jihomoravský kraj</li>
+								<li class="kraj olomoucky">Olomoucký kraj</li>
+								<li class="kraj vysocina">Vysocina</li>
+								<li class="kraj pardubicky">Pardubický kraj</li>
+								<li class="kraj kralovehradecky">Královehradecký kraj</li>
+								<li class="kraj jihocesky">Jihoceský kraj</li>
+								<li class="kraj hlavni-mesto-praha">Hlavní mesto Praha</li>
+								<li class="kraj stredocesky">Stredoceský kraj</li>
+								<li class="kraj liberecky">Liberecký kraj</li>
+								<li class="kraj plzensky">Plzenský kraj</li>
+								<li class="kraj ustecky">Ústecký kraj</li>
+								<li class="kraj karlovarsky">Karlovarský kraj</li>
+							</ul>
+						</div>
+						<p class="source-title">Map: <a href="http://www.cezetmap.cz/">Cezetmap</a> | <a href="http://www.moravio.com/">MORAVIO.COM</a></p>
+					     <small><strong>Total: 464 670 in 2015</strong></small>
+					</div> <!-- col s8 -->
+					<div class="col s3">
+					</div>
+					<div class="col s5">
+						 <div class="kraj-tabulka kr-stredocesky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Stredoceský:</h3>
+							<h3>Total: 61 682</h3>
+							<table class="table striped">
+								<tr><td>Benešov</td><td>2315</td></tr>
+								<tr><td>Beroun</td><td>3741</td></tr>
+								<tr><td>Kladno</td><td>6486</td></tr>
+								<tr><td>Kolín</td><td>3302</td></tr>
+								<tr><td>Kutná Hora</td><td>2054</td></tr>
+								<tr><td>Melník</td><td>4052</td></tr>
+								<tr><td>Mladá Boleslav</td><td>9651</td></tr>
+								<tr><td>Nymburk</td><td>3814</td></tr>
+								<tr><td>Praha - východ</td><td>11160</td></tr>
+								<tr><td>Praha - západ</td><td>10282</td></tr>
+								<tr><td>Príbram</td><td>2648</td></tr>
+								<tr><td>Rakovník</td><td>1817</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihocesky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Jihoceský:</h3>
+							<h3>Total: 16 390</h3>
+							<table class="table striped">
+								<tr><td>Ceské Budejovice</td><td>5391</td></tr>
+								<tr><td>Ceský Krumlov</td><td>2706</td></tr>
+								<tr><td>Jindrichuv Hradec</td><td>1729</td></tr>
+								<tr><td>Písek</td><td>1728</td></tr>
+								<tr><td>Prachatice</td><td>1203</td></tr>
+								<tr><td>Strakonice</td><td>1870</td></tr>
+								<tr><td>Tábor</td><td>1763</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-plzensky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Plzenský:</h3>
+							<h3>Total: 27 304</h3>
+							<table class="table striped">
+								<tr><td>Domažlice</td><td>2750</td></tr>
+								<tr><td>Klatovy</td><td>2578</td></tr>
+								<tr><td>Plzen</td><td>13649</td></tr>
+								<tr><td>Plzen - jih</td><td>1786</td></tr>
+								<tr><td>Plzen - sever</td><td>1677</td></tr>
+								<tr><td>Rokycany</td><td>1614</td></tr>
+								<tr><td>Tachov</td><td>3250</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-karlovarsky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Karlovarský:</h3>
+							<h3>Total: 19 073</h3>
+							<table class="table striped">
+								<tr><td>Cheb</td><td>7302</td></tr>
+								<tr><td>Karlovy Vary</td><td>9056</td></tr>
+								<tr><td>Sokolov</td><td>2715</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-ustecky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Ústecký:</h3>
+							<h3>Total: 32 612</h3>
+							<table class="table striped">
+								<tr><td>Decín</td><td>4175</td></tr>
+								<tr><td>Chomutov</td><td>5512</td></tr>
+								<tr><td>Litomerice</td><td>3453</td></tr>
+								<tr><td>Louny</td><td>2183</td></tr>
+								<tr><td>Most</td><td>4985</td></tr>
+								<tr><td>Teplice</td><td>7543</td></tr>
+								<tr><td>Ústí nad Labem</td><td>4761</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-kralovehradecky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Královéhradecký:</h3>
+							<h3>Total: 13 683</h3>
+							<table class="table striped">
+								<tr><td>Hradec Králové</td><td>4799</td></tr>
+								<tr><td>Jicín</td><td>2014</td></tr>
+								<tr><td>Náchod</td><td>2488</td></tr>
+								<tr><td>Rychnov nad Knežnou</td><td>1460</td></tr>
+								<tr><td>Trutnov</td><td>2922</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-liberecky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Liberecký:</h3>
+							<h3>Total: 17 894</h3>
+							<table class="table striped">
+								<tr><td>Ceská Lípa</td><td>3602</td></tr>
+								<tr><td>Jablonec nad Nisou</td><td>3827</td></tr>
+								<tr><td>Liberec</td><td>8712</td></tr>
+								<tr><td>Semily</td><td>1753</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-pardubicky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Pardubický:</h3>
+							<h3>Total: 12 011</h3>
+							<table class="table striped">
+								<tr><td>Chrudim</td><td>1460</td></tr>
+								<tr><td>Pardubice</td><td>6369</td></tr>
+								<tr><td>Svitavy</td><td>1205</td></tr>
+								<tr><td>Ústí nad Orlicí</td><td>2977</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-vysocina display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Kraj Vysocina:</h3>
+							<h3>Total: 8 050</h3>
+							<table class="table striped">
+								<tr><td>Havlíckuv Brod</td><td>1584</td></tr>
+								<tr><td>Jihlava</td><td>2473</td></tr>
+								<tr><td>Pelhrimov</td><td>1565</td></tr>
+								<tr><td>Trebíc</td><td>1267</td></tr>
+								<tr><td>Ždár nad Sázavou</td><td>1161</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-olomoucky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Olomoucký:</h3>
+							<h3>Total: 10 413</h3>
+							<table class="table striped">
+								<tr><td>Jeseník</td><td>811</td></tr>
+								<tr><td>Olomouc</td><td>4963</td></tr>
+								<tr><td>Prostejov</td><td>1407</td></tr>
+								<tr><td>Prerov</td><td>1990</td></tr>
+								<tr><td>Šumperk</td><td>1242</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Hlavní mesto Praha:</h3>
+							<h3>Total: 171 408</h3>
+							<table class="table striped">
+								<tr><td>Praha 1</td><td>5263</td></tr>
+								<tr><td>Praha 2</td><td>10411</td></tr>
+								<tr><td>Praha 3</td><td>12570</td></tr>
+								<tr><td>Praha 4</td><td>32263</td></tr>
+								<tr><td>Praha 5</td><td>28180</td></tr>
+								<tr><td>Praha 6</td><td>17780</td></tr>
+								<tr><td>Praha 7</td><td>6967</td></tr>
+								<tr><td>Praha 8</td><td>12449</td></tr>
+								<tr><td>Praha 9</td><td>24303</td></tr>
+								<tr><td>Praha 10</td><td>20834</td></tr>
+								<tr><td>Praha</td><td>288</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-zlinsky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Zlínský:</h3>
+							<h3>Total: 8 538</h3>
+							<table class="table striped">
+								<tr><td>Kromeríž</td><td>1130</td></tr>
+								<tr><td>Uherské Hradište</td><td>2353</td></tr>
+								<tr><td>Vsetín</td><td>1604</td></tr>
+								<tr><td>Zlín</td><td>3451</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-moravskoslezsky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Moravskoslezský:</h3>
+							<h3>Total: 24 493</h3>
+							<table class="table striped">
+								<tr><td>Bruntál</td><td>935</td></tr>
+								<tr><td>Frýdek-Místek</td><td>3602</td></tr>
+								<tr><td>Karviná</td><td>6253</td></tr>
+								<tr><td>Nový Jicín</td><td>1800</td></tr>
+								<tr><td>Opava</td><td>1649</td></tr>
+								<tr><td>Ostrava-mesto</td><td>10254</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+
+						<div class="kraj-tabulka kr-jihomoravsky display-none">
+							<div class="text-center">
+								<strong>2015:</strong></br>
+							</div>
+							<h3>Jihomoravský:</h3>
+							<h3>Total: 40 366</h3>
+							<table class="table striped">
+								<tr><td>Blansko</td><td>2140</td></tr>
+								<tr><td>Brno-mesto</td><td>24850</td></tr>
+								<tr><td>Brno-venkov</td><td>4802</td></tr>
+								<tr><td>Breclav</td><td>2423</td></tr>
+								<tr><td>Hodonín</td><td>2095</td></tr>
+								<tr><td>Vyškov</td><td>1611</td></tr>
+								<tr><td>Znojmo</td><td>2445</td></tr>
+							</table>
+							<p class="source-title">Source: Directorate of Alien Police Service</p>
+						</div>
+					   
+					</div><!-- col s4 -->
+		</div> <!-- main row - container -->
+        
+					<footer class="page-footer">
+						<div class="footer-copyright">
+							<div class="row">
+								<div class="col s12 center">
+									© 2016 Nivardo Villanueva Duran
+								</div>
+							</div>
+						</div>
+					</footer>
+	</div><!--/.container-->
+	
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/cezetmap.js"> </script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script>
+            $(document).on('click', '.kraj', function() {
+                var el = $('.click');
+                var className = el.attr('class');
+                var region = className.split(' ')[1];
+                $('.kraj-tabulka').addClass('display-none');
+                $('.kr-' + region).removeClass('display-none');
+            });
+            
+            $(document).on('onmouseover', '.kraj', function () {
+                $('kraj').addClass('kraj_hover');
+            });
+        </script>
+		 <script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+</body>
+  </html>

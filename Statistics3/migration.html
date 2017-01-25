@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/chartist.min.css">
+      <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+
+      <!--Import Highcharts.js-->
+      <script src="js/highcharts.js"></script>
+      <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- Header goes here -->
+            <div class="row">
+                <header>
+                    <h1>Foreigners in the Czech Republic</h1>
+                </header>
+            <!-- Navbar goes here -->
+                <nav>
+                    <div class="nav">
+                        <ul class="nav-ul">
+                            <li class="nav-item" width="40%"><a href="index.html">HOME</a></li>
+                            <li class="nav-item" width="20%"><a href="by-area-regions.html">Number of Foreigners</a></li>
+                           <li class="nav-item"><a href="demographic-events.html">Demographic events</a></li>
+                            <li class="nav-item active"><a href="ilegal-migration.html">Ilegal migration</a></li>
+                            <li class="nav-item"><a href="by-type-of-school.html">Education</a></li>
+                            <li class="nav-item"><a href="criminality.html">Criminality</a></li>
+							<li class="nav-item"><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Page Layout here -->
+            <div class="row">
+
+                <div class="col s5">
+                     <p class="parragraph">More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,More Info about the grahp here,<p>
+					
+                </div>
+
+                <div class="col s7 center">
+                    <h2>Accused and convicted foreigners in custodial establishments and prisons and inmates</h2>
+                    <div id="graph" style="height: 420px"></div>
+                    <script>
+
+                        $(function () {
+                            Highcharts.chart('graph', {
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: false
+                                },
+                                xAxis: {
+                                    categories: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
+                                }
+								,
+                                yAxis: {
+                                    min: 0,
+                                    title: {
+                                        text: 'Accused and convicted'
+                                    },
+                                    stackLabels: {
+                                        enabled: true,
+                                        style: {
+                                            fontWeight: 'bold',
+                                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                                        }
+                                    }
+                                },
+                                legend: {
+                                    align: 'right',
+                                    x: 0,
+                                    verticalAlign: 'top',
+                                    y: -10,
+                                    floating: true,
+                                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                                    borderColor: '#CCC',
+                                    borderWidth: 1,
+                                    shadow: false
+                                },
+                                tooltip: {
+                                    headerFormat: '<b>{point.x}</b><br/>',
+                                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                                },
+                                plotOptions: {
+                                    column: {
+                                        stacking: 'normal',
+                                        dataLabels: {
+                                            enabled: false,
+                                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Accused ',
+                                    data: [757, 790, 792, 663, 532, 541, 505, 579, 549, 611, 552, 587, 543]
+                                }, {
+                                    name: 'Convicted ',
+                                    data: [917, 913 , 920 , 915 , 846 , 851 , 944, 1025 , 1119, 1163 , 1006 , 936, 1006]
+                                }]
+                            });
+                        });
+
+                    </script>
+
+                </div>
+
+            </div>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            © 2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!--/.container-->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>

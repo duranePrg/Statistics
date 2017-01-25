@@ -1,0 +1,457 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+     
+	<!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/chartist.min.css">
+    
+
+    <!--Import Chartist.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/chartist.min.js"></script>
+    <script type="text/javascript" src="js/chartist-plugin-axistitle.min.js"></script>
+    <script type="text/javascript" src="js/chartist-plugin-pointlabels.min.js"></script>
+    
+	<!-- <script type="text/javascript" src="js/chartist-plugin-pointlabels.min.js"></script> -->
+
+
+	  <!-- Responsive Menu-->
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	
+      <!--Import Cezetmap - thanks to team from Moravio (https://github.com/Moravio/CEZET-Map) -->
+      <link rel="stylesheet" href="css/cezetmap.css" />
+      <link rel="stylesheet" href="css/cezetmap.custom.smaller.css" />
+     
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+    <div class="container">
+        <!-- Header goes here -->
+		<div class="row">
+				<header>
+					<h1>Foreigners in the Czech Rep.</h1>
+				</header>
+				<!-- Navbar goes here -->
+				<div id="cssmenu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Foreiners </a>
+							<ul>
+								<li><a href="by-area-regions.html">By Regions</a></li>
+								<li><a href="by-citizenship.html">By Citizenships</a></li>
+								<li><a href="top6-citizenships.html">Top 6 Countries</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="demographic-events.html">Demography</a></li>
+						<li><a href="#">Education</a>
+							<ul>
+								<li><a href="by-type-of-school.html">By type of school</a></li>
+								<li><a href="university.html">University</a></li>
+								<li><a href="higher-professional-schools.html">Higher schools</a></li>
+							</ul>
+						</li>
+					<li><a href="criminality.html">Criminality</a></li>
+					<li><a href="ilegal-migration.html">Illegal migration</a></li>
+					<li><a href="adquisition-of-cz.html">Acquisition of citizenship</a></li>
+				
+				</ul>
+			</div>
+				
+		</div>
+			<!-- Page Layout here -->
+		<div class="row">
+				<div class="col s4 center">
+					<div class="text-center">
+						<strong>Chose the Region:</strong></br>
+					</div>
+						<div class="cezetmap smaller">
+							<ul class="kraje">
+								<li class="kraj zlinsky">Zlínský kraj</li>
+								<li class="kraj moravskoslezsky">
+									<a href="?kraj=moravskoslezsky" title="Moravskoslezský kraj">Moravskoslezský kraj</a>
+								</li>
+								<li class="kraj jihomoravsky">Jihomoravský kraj</li>
+								<li class="kraj olomoucky">Olomoucký kraj</li>
+								<li class="kraj vysocina">Vysočina</li>
+								<li class="kraj pardubicky">Pardubický kraj</li>
+								<li class="kraj kralovehradecky">Královehradecký kraj</li>
+								<li class="kraj jihocesky">Jihočeský kraj</li>
+								<li class="kraj hlavni-mesto-praha">Hlavní město Praha</li>
+								<li class="kraj stredocesky">Středočeský kraj</li>
+								<li class="kraj liberecky">Liberecký kraj</li>
+								<li class="kraj plzensky">Plzeňský kraj</li>
+								<li class="kraj ustecky">Ústecký kraj</li>
+								<li class="kraj karlovarsky">Karlovarský kraj</li>
+							</ul>
+						</div>
+						<p class="source-title">Map: <a href="http://www.cezetmap.cz/">Cezetmap</a> | <a href="http://www.moravio.com/">MORAVIO.COM</a></p>
+										
+				</div>	
+			<div class="col s1"></div>
+				<div class="col s7 center" >
+				
+						<div class="kraj-tabulka kr-zlinsky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Zlínský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-moravskoslezsky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Moravskoslezský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-jihomoravsky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Jihomoravský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-olomoucky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Olomoucký</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-vysocina display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Vysočina</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-pardubicky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Pardubický</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-kralovehradecky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Královehradecký</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-jihocesky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Jihočeský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Hlavní město Praha</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-stredocesky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Středočeský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-liberecky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Liberecký</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-plzensky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Plzeňský</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-ustecky display-none">
+							<h3>1996 - 2015</h3>
+							<h3>Ústecký</h3>
+						</div>
+
+						<div class="kraj-tabulka kr-karlovarsky display-none">
+							<h3>2015</h3>
+							<h3>Karlovarský</h3>
+						</div>
+
+
+
+					<div class="kraj-tabulka kr-jihocesky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-jihocesky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-stredocesky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-stredocesky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-plzensky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-plzensky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-karlovarsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-karlovarsky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-ustecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-ustecky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-kralovehradecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-kralovehradecky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-liberecky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-liberecky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-pardubicky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-pardubicky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-vysocina display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-vysocina"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-olomoucky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-olomoucky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-hlavni-mesto-praha display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-hlavni-mesto-praha"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-zlinsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-zlinsky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-moravskoslezsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-moravskoslezsky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+					<div class="kraj-tabulka kr-jihomoravsky display-none">
+						<div class="ct-chart ct-perfect-fourth" id="chart-jihomoravsky"></div>
+						<p class="source-title">Grahp source: Czech Statistical Office</p>
+					</div>
+
+				</div>
+				
+		</div>
+
+		<footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="row">
+                        <div class="col s12 center">
+                            ©2016 Nivardo Villanueva Duran
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </div><!--/.container-->
+
+
+
+        <!--Import jQuery before materialize.js-->
+        <script src="js/cezetmap.js"> </script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script>
+            $(document).on('click', '.kraj', function() {
+                var el = $('.click');
+                var className = el.attr('class');
+                var region = className.split(' ')[1];
+                $('.kraj-tabulka').addClass('display-none');
+                $('.kr-' + region).removeClass('display-none');
+
+
+                new Chartist.Line('#chart-jihocesky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[9175,8698,9660,9954,10595,12584,15171,16560,15415,15037,14894,14838,15200,15366,16390]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-stredocesky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[22413,27038,29847,31127,35304,42588,50273,60123,58490,57757,57522,56810,57850,59860,61682]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-plzensky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[8670,10815,12687,12530,13206,15432,20986,27636,27562,25175,23884,23866,25166,25958,27304]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-karlovarsky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[7670,13198,13563,14729,14437,16075,19419,20321,19643,19617,19411,18388,18854,18873,19073]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-ustecky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[13985,16180,16883,19731,22130,26336,33053,35451,31995,30578,30607,30461,31520,31878,32612]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-kralovehradecky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[8418,9386,9269,9852,11294,13326,15512,16517,15244,14798,14078,13269,13312,13266,13683]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-liberecky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[8446,9069,9849,10672,11675,13148,15288,17320,17309,16776,16660,16604,16819,17048,17894]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-pardubicky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[5335,6623,5807,5863,6418,7670,10562,12588,11972,12063,11495,11115,11301,11559,12011]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-vysocina', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[3739,5246,5961,5883,6160,7016,8729,9771,8583,8023,7873,7752,7775,7806,8050]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-olomoucky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[6037,6910,7038,7103,7497,8499,10322,9909,9440,9465,9765,9807,10041,10110,10413]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-hlavni-mesto-praha', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[61203,70978,69115,77922,89997,103482,129002,141841,148123,148447,160783,162715,161006,166332,171408]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-zlinsky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[6558,8262,8115,6374,5926,6596,7639,8413,8133,8032,8009,7968,8003,8106,8538]]
+                }, {
+                    low: 0,
+                    plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-moravskoslezsky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[22779,19166,19959,18329,19337,20602,22962,25496,23687,22570,22786,23117,23702,23924,24493]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+                new Chartist.Line('#chart-jihomoravsky', {
+                    labels: ['1996', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                    series: [[14723,20039,22668,23913,24234,27983,32606,35619,36907,35953,36386,36690,37804,38588,40366]]
+                }, {
+                    low: 0,
+                        plugins: [
+                        Chartist.plugins.ctPointLabels({
+                            textAnchor: 'middle'
+                        })
+                    ]
+                });
+
+            });
+
+            $(document).on('onmouseover', '.kraj', function () {
+                $('kraj').addClass('kraj_hover');
+            });
+        </script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/menumaker.js"></script>
+		<script type="text/javascript">
+			$("#cssmenu").menumaker({
+				title: "Menu",
+				format: "multitoggle"
+			});
+		</script>
+
+    </body>
+  </html>

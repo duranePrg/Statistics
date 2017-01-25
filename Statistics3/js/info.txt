@@ -1,0 +1,11 @@
+
+CSS framework:
+	Materialize: 
+	Cezetmap / Font map using SVG coordinates
+
+JS libraries:
+	Jquery
+	Jquery for CSV
+	Highcharts.js - main page
+	Chartist.js : other graphs
+-

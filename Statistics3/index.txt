@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>MenuMaker</title>
+	<link rel="stylesheet" type="text/css" href="css/menumaker.css">
+	<style>
+		#cssmenu {
+			position: relative;
+			top: 10px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<h1>test</h1>
+	</header>
+<div id="cssmenu">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li>
+			
+				
+				<li>
+					<a href="#">Foreiners </a>
+					<ul>
+						<li><a href="#">By Regions</a></li>
+						<li><a href="#">By Citizenships</a></li>
+						<li><a href="#">Top 6 Countries</a></li>
+								<li><a href="#">Acquisition of citizenship</a></li>
+					</ul>
+				</li>
+			
+				
+				<li><a href="#">Education</a>
+				<ul>
+						<li><a href="#">Plugins</a></li>
+						<li><a href="#">Extensions</a></li>
+						<li><a href="#">Modules</a></li>
+				</ul>
+				</li>
+				
+			
+		</li>
+		<li><a href="#">Illegal migration</a></li>
+		<li><a href="#">Criminality</a></li>
+		<li><a href="#">Criminal</a></li>
+
+		
+	</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/menumaker.js"></script>
+<script type="text/javascript">
+	$("#cssmenu").menumaker({
+		title: "Menu",
+		format: "multitoggle"
+	});
+</script>
+
+</body>
+</html>
